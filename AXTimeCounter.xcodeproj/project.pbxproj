@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED564D732BA798D90087BB21 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED564D722BA798D90087BB21 /* StatisticsView.swift */; };
+		ED9AE5332BA7163300C5DF0C /* AXAppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AE5322BA7163300C5DF0C /* AXAppData.swift */; };
+		ED9AE5352BA7360200C5DF0C /* Backup in Resources */ = {isa = PBXBuildFile; fileRef = ED9AE5342BA7360200C5DF0C /* Backup */; };
+		EDA43D2C2BA6FF77008A0495 /* AXTaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA43D2B2BA6FF77008A0495 /* AXTaskItemView.swift */; };
+		EDA43D2F2BA70215008A0495 /* AXTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA43D2E2BA70215008A0495 /* AXTask.swift */; };
+		EDA43D312BA707EF008A0495 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA43D302BA707EF008A0495 /* InfoView.swift */; };
+		EDA43D332BA709B5008A0495 /* TaskCustomizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA43D322BA709B5008A0495 /* TaskCustomizerView.swift */; };
+		EDD1ADEC2BA6F9020051B122 /* AXTimeCounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD1ADEB2BA6F9020051B122 /* AXTimeCounterApp.swift */; };
+		EDD1ADF02BA6F9030051B122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDD1ADEF2BA6F9030051B122 /* Assets.xcassets */; };
+		EDD1ADF32BA6F9030051B122 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDD1ADF22BA6F9030051B122 /* Preview Assets.xcassets */; };
+		EDD1ADFB2BA6FA560051B122 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD1ADFA2BA6FA560051B122 /* HomeView.swift */; };
+		EDD1ADFE2BA6FAAD0051B122 /* AXStartStopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD1ADFD2BA6FAAD0051B122 /* AXStartStopButton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ED564D722BA798D90087BB21 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		ED9AE5322BA7163300C5DF0C /* AXAppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AXAppData.swift; sourceTree = "<group>"; };
+		ED9AE5342BA7360200C5DF0C /* Backup */ = {isa = PBXFileReference; lastKnownFileType = text; path = Backup; sourceTree = "<group>"; };
+		EDA43D2B2BA6FF77008A0495 /* AXTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AXTaskItemView.swift; sourceTree = "<group>"; };
+		EDA43D2E2BA70215008A0495 /* AXTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AXTask.swift; sourceTree = "<group>"; };
+		EDA43D302BA707EF008A0495 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		EDA43D322BA709B5008A0495 /* TaskCustomizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCustomizerView.swift; sourceTree = "<group>"; };
+		EDD1ADE82BA6F9020051B122 /* AXTimeCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AXTimeCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDD1ADEB2BA6F9020051B122 /* AXTimeCounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AXTimeCounterApp.swift; sourceTree = "<group>"; };
+		EDD1ADEF2BA6F9030051B122 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDD1ADF22BA6F9030051B122 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EDD1ADF42BA6F9030051B122 /* AXTimeCounter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AXTimeCounter.entitlements; sourceTree = "<group>"; };
+		EDD1ADFA2BA6FA560051B122 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EDD1ADFD2BA6FAAD0051B122 /* AXStartStopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AXStartStopButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDD1ADE52BA6F9020051B122 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDA43D2D2BA7020B008A0495 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EDA43D2E2BA70215008A0495 /* AXTask.swift */,
+				ED9AE5322BA7163300C5DF0C /* AXAppData.swift */,
+				ED9AE5342BA7360200C5DF0C /* Backup */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EDD1ADDF2BA6F9020051B122 = {
+			isa = PBXGroup;
+			children = (
+				EDD1ADEA2BA6F9020051B122 /* AXTimeCounter */,
+				EDD1ADE92BA6F9020051B122 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDD1ADE92BA6F9020051B122 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDD1ADE82BA6F9020051B122 /* AXTimeCounter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDD1ADEA2BA6F9020051B122 /* AXTimeCounter */ = {
+			isa = PBXGroup;
+			children = (
+				EDD1ADEB2BA6F9020051B122 /* AXTimeCounterApp.swift */,
+				EDD1ADFF2BA6FE160051B122 /* Views */,
+				EDD1ADFC2BA6FA950051B122 /* ViewModels */,
+				EDA43D2D2BA7020B008A0495 /* Models */,
+				EDD1ADEF2BA6F9030051B122 /* Assets.xcassets */,
+				EDD1ADF42BA6F9030051B122 /* AXTimeCounter.entitlements */,
+				EDD1ADF12BA6F9030051B122 /* Preview Content */,
+			);
+			path = AXTimeCounter;
+			sourceTree = "<group>";
+		};
+		EDD1ADF12BA6F9030051B122 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EDD1ADF22BA6F9030051B122 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EDD1ADFC2BA6FA950051B122 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EDA43D2B2BA6FF77008A0495 /* AXTaskItemView.swift */,
+				EDD1ADFD2BA6FAAD0051B122 /* AXStartStopButton.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EDD1ADFF2BA6FE160051B122 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EDD1ADFA2BA6FA560051B122 /* HomeView.swift */,
+				EDA43D302BA707EF008A0495 /* InfoView.swift */,
+				EDA43D322BA709B5008A0495 /* TaskCustomizerView.swift */,
+				ED564D722BA798D90087BB21 /* StatisticsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDD1ADE72BA6F9020051B122 /* AXTimeCounter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDD1ADF72BA6F9030051B122 /* Build configuration list for PBXNativeTarget "AXTimeCounter" */;
+			buildPhases = (
+				EDD1ADE42BA6F9020051B122 /* Sources */,
+				EDD1ADE52BA6F9020051B122 /* Frameworks */,
+				EDD1ADE62BA6F9020051B122 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AXTimeCounter;
+			productName = AXTimeCounter;
+			productReference = EDD1ADE82BA6F9020051B122 /* AXTimeCounter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDD1ADE02BA6F9020051B122 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					EDD1ADE72BA6F9020051B122 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = EDD1ADE32BA6F9020051B122 /* Build configuration list for PBXProject "AXTimeCounter" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDD1ADDF2BA6F9020051B122;
+			productRefGroup = EDD1ADE92BA6F9020051B122 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDD1ADE72BA6F9020051B122 /* AXTimeCounter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDD1ADE62BA6F9020051B122 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDD1ADF32BA6F9030051B122 /* Preview Assets.xcassets in Resources */,
+				EDD1ADF02BA6F9030051B122 /* Assets.xcassets in Resources */,
+				ED9AE5352BA7360200C5DF0C /* Backup in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDD1ADE42BA6F9020051B122 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA43D2C2BA6FF77008A0495 /* AXTaskItemView.swift in Sources */,
+				EDA43D2F2BA70215008A0495 /* AXTask.swift in Sources */,
+				EDA43D332BA709B5008A0495 /* TaskCustomizerView.swift in Sources */,
+				EDD1ADFE2BA6FAAD0051B122 /* AXStartStopButton.swift in Sources */,
+				ED564D732BA798D90087BB21 /* StatisticsView.swift in Sources */,
+				EDD1ADFB2BA6FA560051B122 /* HomeView.swift in Sources */,
+				EDD1ADEC2BA6F9020051B122 /* AXTimeCounterApp.swift in Sources */,
+				ED9AE5332BA7163300C5DF0C /* AXAppData.swift in Sources */,
+				EDA43D312BA707EF008A0495 /* InfoView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EDD1ADF52BA6F9030051B122 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDD1ADF62BA6F9030051B122 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		EDD1ADF82BA6F9030051B122 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AXTimeCounter/AXTimeCounter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AXTimeCounter/Preview Content\"";
+				DEVELOPMENT_TEAM = 3TJDS4N2C3;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashwin.AXTimeCounter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EDD1ADF92BA6F9030051B122 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AXTimeCounter/AXTimeCounter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AXTimeCounter/Preview Content\"";
+				DEVELOPMENT_TEAM = 3TJDS4N2C3;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashwin.AXTimeCounter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDD1ADE32BA6F9020051B122 /* Build configuration list for PBXProject "AXTimeCounter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDD1ADF52BA6F9030051B122 /* Debug */,
+				EDD1ADF62BA6F9030051B122 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDD1ADF72BA6F9030051B122 /* Build configuration list for PBXNativeTarget "AXTimeCounter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDD1ADF82BA6F9030051B122 /* Debug */,
+				EDD1ADF92BA6F9030051B122 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDD1ADE02BA6F9020051B122 /* Project object */;
+}
