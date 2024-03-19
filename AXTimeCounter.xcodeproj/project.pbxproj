@@ -19,6 +19,7 @@
 		EDD1ADF32BA6F9030051B122 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDD1ADF22BA6F9030051B122 /* Preview Assets.xcassets */; };
 		EDD1ADFB2BA6FA560051B122 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD1ADFA2BA6FA560051B122 /* HomeView.swift */; };
 		EDD1ADFE2BA6FAAD0051B122 /* AXStartStopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD1ADFD2BA6FAAD0051B122 /* AXStartStopButton.swift */; };
+		EDDE10F42BA90BD100370817 /* IdleTimerPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDE10F32BA90BD100370817 /* IdleTimerPopupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		EDD1ADF42BA6F9030051B122 /* AXTimeCounter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AXTimeCounter.entitlements; sourceTree = "<group>"; };
 		EDD1ADFA2BA6FA560051B122 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EDD1ADFD2BA6FAAD0051B122 /* AXStartStopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AXStartStopButton.swift; sourceTree = "<group>"; };
+		EDDE10F32BA90BD100370817 /* IdleTimerPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleTimerPopupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				EDA43D302BA707EF008A0495 /* InfoView.swift */,
 				EDA43D322BA709B5008A0495 /* TaskCustomizerView.swift */,
 				ED564D722BA798D90087BB21 /* StatisticsView.swift */,
+				EDDE10F32BA90BD100370817 /* IdleTimerPopupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDA43D2C2BA6FF77008A0495 /* AXTaskItemView.swift in Sources */,
+				EDDE10F42BA90BD100370817 /* IdleTimerPopupView.swift in Sources */,
 				EDA43D2F2BA70215008A0495 /* AXTask.swift in Sources */,
 				EDA43D332BA709B5008A0495 /* TaskCustomizerView.swift in Sources */,
 				EDD1ADFE2BA6FAAD0051B122 /* AXStartStopButton.swift in Sources */,

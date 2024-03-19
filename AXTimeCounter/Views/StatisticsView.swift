@@ -35,25 +35,27 @@ struct StatisticsView: View {
                         if let session = task.getSession(at: shortDate) {
                             BarMark(
                                 x: .value("Date", shortDate),
-                                y: .value("Seconds", session.time)
-                                
+                                y: .value("Minutes", session.time / 60)
                             )
+                            .interpolationMethod(.catmullRom)
                             .foregroundStyle(task.color)
                         } else {
                             BarMark(
                                 x: .value("Date", shortDate),
-                                y: .value("Seconds", 0)
+                                y: .value("Minutes", 0)
                             )
                         }
                     }
                 }
             }
+            .chartYAxisLabel("Minutes", position: .trailing, alignment: .center, spacing: 5)
+            .chartXAxisLabel("Date", position: .bottom, alignment: .center, spacing: 5)
             .chartXSelection(value: $selectedDate)
             .popover(isPresented: $showingPopover) {
                 if let selectedDate = selectedDate {
                     List(appData.tasks) { task in
                         if let session = task.getSession(at: selectedDate) {
-                            Text("\(task.name): \(session.time)")
+                            Text("\(task.name): \(formattedTime(session.time))")
                         }
                     }
                 }
@@ -75,6 +77,21 @@ struct StatisticsView: View {
         }
         .padding()
         .navigationTitle("Statistics")
+    }
+    
+    private func formattedTime(_ seconds: Double) -> String {
+        let totalSeconds = Int(seconds)
+        let hours = totalSeconds / 3600
+        let minutes = (totalSeconds % 3600) / 60
+        let remainingSeconds = totalSeconds % 60
+        
+        if hours > 0 {
+            return String(format: "%d:%02d:%02d hours", hours, minutes, remainingSeconds)
+        } else if minutes > 0 {
+            return String(format: "%d:%02d minutes", minutes, remainingSeconds)
+        } else {
+            return String(format: "%d seconds", remainingSeconds)
+        }
     }
 }
 

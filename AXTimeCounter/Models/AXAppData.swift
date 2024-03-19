@@ -6,12 +6,19 @@
 //
 
 import Foundation
+import AppKit
+import SwiftUI
 
 @Observable
 class AXAppData {
     var tasks = [Task]()
     var currentTask: Task?
+    
     var currentTimer: Timer?
+    
+    var lastMovedMouse: Date?
+    var idleTimer: Timer?
+    var mouseMonitorEvent: Any?
     
     private var reader: FileReader
     
@@ -48,13 +55,85 @@ class AXAppData {
         currentTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             self.currentTask!.updateLatestSession(1) // 1 second
         }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [unowned self] in
+            self.startIdleTimer()
+        }
     }
     
     func stopTimer() {
         currentTimer?.invalidate()
         currentTimer = nil
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [unowned self] in
+            self.stopIdleTimer()
+        }
+        
         encode()
+    }
+    
+    func stopIdleTimer() {
+        self.idleTimer?.invalidate()
+        self.idleTimer = nil
+        
+        if let event = self.mouseMonitorEvent {
+            NSEvent.removeMonitor(event)
+        }
+        
+        
+        self.mouseMonitorEvent = nil
+    }
+    
+    func startIdleTimer() {
+        self.idleTimer = Timer.scheduledTimer(withTimeInterval: 5 * 60, repeats: true) { _ in
+            if let lastMovedMouse = self.lastMovedMouse {
+                let elapsedTime = Date().timeIntervalSince(lastMovedMouse)
+                print("Time", elapsedTime)
+                if elapsedTime >= 5 * 60 {
+                    print("Show PopupView")
+                    self.showInactivePopup()
+                }
+            }
+        }
+        
+        mouseMonitorEvent = NSEvent.addGlobalMonitorForEvents(matching: [.mouseMoved, .keyDown]) { event in
+            self.lastMovedMouse = Date()
+#if DEBUG
+            print("Mouse Moused \(UUID())")
+#endif
+        }
+    }
+    
+    func showInactivePopup() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [unowned self] in
+            self.stopIdleTimer()
+        }
+        
+        let previousTime = self.currentTask!.getLatestSession().time
+        let window = NSWindow(
+            contentRect: NSRect(x: 0, y: 0, width: 300, height: 150),
+            styleMask: [.titled, .closable],
+            backing: .buffered, defer: false)
+        
+        let contentView = IdleTimerPopupView(window: window, stopTimerAction: {
+            self.currentTask!.modifyLatestSession(previousTime)
+            self.stopTimer()
+        }, keepTimerAction: {
+            self.lastMovedMouse = Date()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [unowned self] in
+                self.startIdleTimer()
+            }
+        })
+        
+        window.title = "Inactive"
+        window.titlebarAppearsTransparent = true
+        window.center()
+        window.contentView = NSHostingView(rootView: contentView)
+        
+        NSApplication.show(ignoringOtherApps: true)
+        window.makeKeyAndOrderFront(nil)
+        window.isReleasedWhenClosed = true
     }
 }
 

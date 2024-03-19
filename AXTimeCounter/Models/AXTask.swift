@@ -13,18 +13,16 @@ class Task: Codable, Identifiable, Hashable {
     var name: String
     var color: Color
     var sessions: [Session] = []
-    var sessionsByDate: [String: Session] = [:] // Dictionary to store sessions by date
     
     init(name: String, color: Color, sessions: [Session] = []) {
         self.name = name
         self.color = color
         self.sessions = sessions
-        updateSessionsByDate()
     }
     
-    // Function to update sessionsByDate dictionary
-    private func updateSessionsByDate() {
-        sessionsByDate = Dictionary(uniqueKeysWithValues: sessions.map { ($0.date, $0) })
+    // Computed property to generate sessionsByDate dynamically
+    var sessionsByDate: [String: Session] {
+        return Dictionary(uniqueKeysWithValues: sessions.map { ($0.date, $0) })
     }
     
     // Function to check if a session exists at a certain date
@@ -43,8 +41,18 @@ class Task: Codable, Identifiable, Hashable {
         } else {
             sessions.append(latestSession)
         }
+    }
+    
+    func modifyLatestSession(_ newTime: TimeInterval) {
+        var latestSession = getLatestSession()
+        latestSession.time = newTime
         
-        updateSessionsByDate() // Update sessionsByDate after updating sessions
+        let index = sessions.count
+        if index > 0 {
+            sessions[index - 1] = latestSession
+        } else {
+            sessions.append(latestSession)
+        }
     }
     
     func getLatestSession() -> Session {
@@ -72,7 +80,6 @@ class Task: Codable, Identifiable, Hashable {
         name = try container.decode(String.self, forKey: .name)
         color = try container.decode(Color.self, forKey: .color)
         sessions = try container.decode([Session].self, forKey: .sessions)
-        updateSessionsByDate() // Update sessionsByDate after decoding sessions
     }
     
     func encode(to encoder: Encoder) throws {

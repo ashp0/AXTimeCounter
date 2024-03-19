@@ -18,7 +18,11 @@ struct AXTimeCounterApp: App {
             HomeView()
                 .environment(appData)
         } label: {
-            Text("| \((appData.currentTask != nil) ? appData.currentTask!.name : "A(x)") |")
+            if let task = appData.currentTask {
+                Text("| \(task.name) |")
+            } else {
+                Text("| A(x) |")
+            }
         }
         .menuBarExtraStyle(.window)
         
