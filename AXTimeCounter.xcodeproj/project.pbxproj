@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ED564D732BA798D90087BB21 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED564D722BA798D90087BB21 /* StatisticsView.swift */; };
+		ED7C37E22BAA728E00C122F7 /* AXColorPickerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7C37E12BAA728D00C122F7 /* AXColorPickerButton.swift */; };
 		ED9AE5332BA7163300C5DF0C /* AXAppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9AE5322BA7163300C5DF0C /* AXAppData.swift */; };
 		ED9AE5352BA7360200C5DF0C /* Backup in Resources */ = {isa = PBXBuildFile; fileRef = ED9AE5342BA7360200C5DF0C /* Backup */; };
 		EDA43D2C2BA6FF77008A0495 /* AXTaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA43D2B2BA6FF77008A0495 /* AXTaskItemView.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		ED564D722BA798D90087BB21 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		ED7C37E12BAA728D00C122F7 /* AXColorPickerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AXColorPickerButton.swift; sourceTree = "<group>"; };
 		ED9AE5322BA7163300C5DF0C /* AXAppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AXAppData.swift; sourceTree = "<group>"; };
 		ED9AE5342BA7360200C5DF0C /* Backup */ = {isa = PBXFileReference; lastKnownFileType = text; path = Backup; sourceTree = "<group>"; };
 		EDA43D2B2BA6FF77008A0495 /* AXTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AXTaskItemView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				EDA43D2B2BA6FF77008A0495 /* AXTaskItemView.swift */,
 				EDD1ADFD2BA6FAAD0051B122 /* AXStartStopButton.swift */,
+				ED7C37E12BAA728D00C122F7 /* AXColorPickerButton.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				EDA43D332BA709B5008A0495 /* TaskCustomizerView.swift in Sources */,
 				EDD1ADFE2BA6FAAD0051B122 /* AXStartStopButton.swift in Sources */,
 				ED564D732BA798D90087BB21 /* StatisticsView.swift in Sources */,
+				ED7C37E22BAA728E00C122F7 /* AXColorPickerButton.swift in Sources */,
 				EDD1ADFB2BA6FA560051B122 /* HomeView.swift in Sources */,
 				EDD1ADEC2BA6F9020051B122 /* AXTimeCounterApp.swift in Sources */,
 				ED9AE5332BA7163300C5DF0C /* AXAppData.swift in Sources */,

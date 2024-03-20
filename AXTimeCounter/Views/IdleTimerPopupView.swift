@@ -28,11 +28,13 @@ struct IdleTimerPopupView: View {
                     disableAllComms = true
                     window.close()
                     stopTimerAction()
+                    NSApplication.hide()
                 }
                 Button("Keep Timer") {
                     disableAllComms = true
                     window.close()
                     keepTimerAction()
+                    NSApplication.hide()
                 }
             }
         }
@@ -48,6 +50,7 @@ struct IdleTimerPopupView: View {
                 if !disableAllComms {
                     window.close()
                     keepTimerAction()
+                    NSApplication.hide()
                 }
                 
             @unknown default:

@@ -13,7 +13,7 @@ struct TaskCustomizerView: View {
     @State private var newColor = Color.red // Default color
     
     @Environment(AXAppData.self) private var appData
-
+    
     var body: some View {
         HStack {
             // Table view of tasks
@@ -21,9 +21,9 @@ struct TaskCustomizerView: View {
                 ForEach(appData.tasks) { task in
                     HStack {
                         Button(action: {
-                            selectedTask = task
                             newName = task.name
                             newColor = task.color
+                            selectedTask = task
                         }) {
                             ZStack(alignment: .leading) {
                                 task.color.opacity(task != selectedTask ? 0.1 : 1)
@@ -61,14 +61,10 @@ struct TaskCustomizerView: View {
                     
                     Text("Color")
                     HStack {
-                        ForEach([Color.red, .green, .blue, .yellow], id: \.self) { color in
-                            Circle()
-                                .fill(color)
-                                .frame(width: 30, height: 30)
-                                .onTapGesture {
-                                    newColor = color
-                                    updateTask()
-                                }
+                        ForEach([Color.red, .orange, .yellow, .green, .teal, .mint, .blue, .purple, .pink], id: \.self) { color in
+                            AXColorPickerButton(selectedColor: $newColor, color: color, action: {
+                                updateTask()
+                            })
                         }
                     }
                 }
