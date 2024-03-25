@@ -56,8 +56,8 @@
 		EDA43D2D2BA7020B008A0495 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EDA43D2E2BA70215008A0495 /* AXTask.swift */,
 				ED9AE5322BA7163300C5DF0C /* AXAppData.swift */,
+				EDA43D2E2BA70215008A0495 /* AXTask.swift */,
 				ED9AE5342BA7360200C5DF0C /* Backup */,
 			);
 			path = Models;

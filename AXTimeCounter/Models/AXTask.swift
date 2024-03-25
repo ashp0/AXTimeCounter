@@ -32,27 +32,13 @@ class Task: Codable, Identifiable, Hashable {
     
     // MARK: - Session Management
     func updateLatestSession(_ by: TimeInterval) {
-        var latestSession = getLatestSession()
+        let latestSession = getLatestSession()
         latestSession.time += by
-        
-        let index = sessions.count
-        if index > 0 {
-            sessions[index - 1] = latestSession
-        } else {
-            sessions.append(latestSession)
-        }
     }
     
     func modifyLatestSession(_ newTime: TimeInterval) {
-        var latestSession = getLatestSession()
+        let latestSession = getLatestSession()
         latestSession.time = newTime
-        
-        let index = sessions.count
-        if index > 0 {
-            sessions[index - 1] = latestSession
-        } else {
-            sessions.append(latestSession)
-        }
     }
     
     func getLatestSession() -> Session {
@@ -100,9 +86,14 @@ class Task: Codable, Identifiable, Hashable {
     }
 }
 
-struct Session: Codable {
+class Session: Codable {
     let date: String
     var time: TimeInterval
+    
+    public init(date: String, time: TimeInterval) {
+        self.date = date
+        self.time = time
+    }
 }
 
 extension Color: Codable {

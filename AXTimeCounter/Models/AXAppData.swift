@@ -13,8 +13,7 @@ import SwiftUI
 class AXAppData {
     var tasks = [Task]()
     var currentTask: Task?
-    
-    var currentTimer: Timer?
+    var currentTaskStartDate: Date?
     
     var lastMovedMouse: Date?
     var idleTimer: Timer?
@@ -52,9 +51,7 @@ class AXAppData {
     
     func startTimer(for task: Task) {
         currentTask = task
-        currentTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            self.currentTask!.updateLatestSession(1) // 1 second
-        }
+        currentTaskStartDate = Date()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [unowned self] in
             self.startIdleTimer()
@@ -62,8 +59,13 @@ class AXAppData {
     }
     
     func stopTimer() {
-        currentTimer?.invalidate()
-        currentTimer = nil
+        if let currentTask = currentTask {
+            let newTime = Date().timeIntervalSince(currentTaskStartDate!)
+            currentTask.updateLatestSession(newTime)
+            currentTaskStartDate = nil
+        }
+        
+        currentTask = nil
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [unowned self] in
             self.stopIdleTimer()
@@ -85,11 +87,11 @@ class AXAppData {
     }
     
     func startIdleTimer() {
-        self.idleTimer = Timer.scheduledTimer(withTimeInterval: 5 * 60, repeats: true) { _ in
+        self.idleTimer = Timer.scheduledTimer(withTimeInterval: 1 * 60, repeats: true) { _ in
             if let lastMovedMouse = self.lastMovedMouse {
                 let elapsedTime = Date().timeIntervalSince(lastMovedMouse)
                 print("Time", elapsedTime)
-                if elapsedTime >= 5 * 60 {
+                if elapsedTime >= 1 * 60 {
                     print("Show PopupView")
                     self.showInactivePopup()
                 }

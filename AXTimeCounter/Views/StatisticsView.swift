@@ -10,11 +10,11 @@ import Charts
 
 struct StatisticsView: View {
     @Environment(AXAppData.self) private var appData
-    @State var selectedDate: String? = nil
+    @State private var selectedDate: String? = nil
     @State private var showingPopover = false
+    @State private var currentDateIndex = 0
     
-    
-    let daysToShow: Int = 7 // Change this value to adjust the number of days to show
+    let daysToShow: Int = 7 // Number of days to show
     
     var body: some View {
         VStack {
@@ -23,7 +23,7 @@ struct StatisticsView: View {
                 .padding()
             
             Chart {
-                let currentDate = Date()
+                let currentDate = Calendar.current.date(byAdding: .weekOfYear, value: currentDateIndex, to: Date())!
                 let calendar = Calendar.current
                 let startOfWeek = calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: currentDate))!
                 
@@ -77,6 +77,29 @@ struct StatisticsView: View {
         }
         .padding()
         .navigationTitle("Statistics")
+        .toolbar {
+            ToolbarItem(placement: .navigation) {
+                Button(action: {
+                    currentDateIndex -= 1
+                }) {
+                    Image(systemName: "chevron.left")
+                }
+            }
+            ToolbarItem(placement: .navigation) {
+                Button(action: {
+                    currentDateIndex += 1
+                }) {
+                    Image(systemName: "chevron.right")
+                }
+            }
+            ToolbarItem(placement: .navigation) {
+                Button(action: {
+                    currentDateIndex = 0
+                }) {
+                    Text("Today")
+                }
+            }
+        }
     }
     
     private func formattedTime(_ seconds: Double) -> String {
@@ -94,6 +117,7 @@ struct StatisticsView: View {
         }
     }
 }
+
 
 
 

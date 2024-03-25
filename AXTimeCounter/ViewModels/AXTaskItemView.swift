@@ -31,9 +31,15 @@ struct AXTaskItemView: View {
                 
                 Spacer()
                 
-                Text("\(timeString(time: task.getLatestSession().time))")
-                    .padding(.trailing)
-                    .foregroundStyle(.gray)
+                if isPaused {
+                    Text("\(timeString(time: task.getLatestSession().time))")
+                        .padding(.trailing)
+                        .foregroundStyle(.gray)
+                } else {
+                    Text("Active")
+                        .padding(.trailing)
+                        .foregroundStyle(.gray)
+                }
             }
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
